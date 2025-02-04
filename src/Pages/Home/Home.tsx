@@ -1,4 +1,5 @@
 import Banner from "./Banner";
+import HomeBlogs from "./HomeBlogs";
 import HomeProduct from "./HomeProduct";
 import TopBrands from "./TopBrand";
 
@@ -7,6 +8,7 @@ const Home = () => {
     <div>
       <Banner />
       <HomeProduct />
+      <HomeBlogs />
       <TopBrands />
     </div>
   );
