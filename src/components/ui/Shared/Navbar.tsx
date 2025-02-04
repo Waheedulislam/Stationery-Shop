@@ -39,10 +39,10 @@ const Navbar: React.FC = () => {
             Home
           </Link>
           <Link
-            to="/shop"
+            to="/product"
             className="text-white  font-semibold hover:border-b px-3 pb-1  transition-colors"
           >
-            Shop
+            Products
           </Link>
           <Link
             to="/offers"
@@ -50,12 +50,7 @@ const Navbar: React.FC = () => {
           >
             Offers
           </Link>
-          <Link
-            to="/new-arrivals"
-            className="text-white  font-semibold hover:border-b px-3 pb-1  transition-colors"
-          >
-            New Arrivals
-          </Link>
+
           <Link
             to="/about"
             className="text-white  font-semibold hover:border-b px-3 pb-1  transition-colors"
@@ -129,10 +124,10 @@ const Navbar: React.FC = () => {
           </Link>
           <hr />
           <Link
-            to="/shop"
+            to="/product"
             className="block text-xl font-semibold  text-gray-800 hover:text-gray-600 transition-colors"
           >
-            Shop
+            Products
           </Link>
           <hr />
           <Link
@@ -142,13 +137,7 @@ const Navbar: React.FC = () => {
             Offers
           </Link>
           <hr />
-          <Link
-            to="/new-arrivals"
-            className="block text-xl font-semibold  text-gray-800 hover:text-gray-600 transition-colors"
-          >
-            New Arrivals
-          </Link>
-          <hr />
+
           <Link
             to="/about"
             className="block text-xl font-semibold  text-gray-800 hover:text-gray-600 transition-colors"
