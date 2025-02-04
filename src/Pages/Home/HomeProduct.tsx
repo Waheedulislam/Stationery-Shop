@@ -4,7 +4,7 @@ import ProductCard from "../Product/ProductCard";
 const HomeProduct: React.FC = () => {
   return (
     <div className="max-w-screen-xl pt-20 mx-auto px-6 py-12">
-      <h2 className="text-3xl font-semibold text-gray-800 text-left border-b-2   border-[#F06392] mb-8 w-72 ">
+      <h2 className="text-3xl font-semibold text-gray-800 text-left border-b-2  pb-2  border-[#F06392] mb-8 w-64 ">
         Latest Products
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
