@@ -45,10 +45,10 @@ const Navbar: React.FC = () => {
             Products
           </Link>
           <Link
-            to="/offers"
+            to="/dashboard"
             className="text-white  font-semibold hover:border-b px-3 pb-1  transition-colors"
           >
-            Offers
+            Dashboard
           </Link>
 
           <Link
