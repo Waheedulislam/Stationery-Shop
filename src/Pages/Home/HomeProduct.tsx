@@ -1,5 +1,22 @@
-import React, { useState } from "react";
-import ProductCard from "./ProductCard";
+import React from "react";
+import ProductCard from "../Product/ProductCard";
+
+const HomeProduct: React.FC = () => {
+  return (
+    <div className="max-w-screen-xl pt-20 mx-auto px-6 py-12">
+      <h2 className="text-3xl font-semibold text-gray-800 text-left border-b-2   border-[#F06392] mb-8 w-72 ">
+        Latest Products
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {products.slice(0, 8).map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default HomeProduct;
 
 const products = [
   {
@@ -81,45 +98,3 @@ const products = [
     category: "Electronics",
   },
 ];
-
-const Product: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState("");
-
-  const filteredProducts = products.filter((product) =>
-    product.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-
-  return (
-    <div className="max-w-screen-xl pt-20 mx-auto px-6 py-12">
-      <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">
-        Latest Products
-      </h2>
-
-      {/* Search Bar */}
-      <div className="mb-8 flex justify-center">
-        <input
-          type="text"
-          placeholder="Search products..."
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          className="w-full max-w-md px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-[#F06392]"
-        />
-      </div>
-
-      {/* Product Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {filteredProducts.length > 0 ? (
-          filteredProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))
-        ) : (
-          <p className="text-center col-span-full text-gray-500">
-            No products found.
-          </p>
-        )}
-      </div>
-    </div>
-  );
-};
-
-export default Product;
