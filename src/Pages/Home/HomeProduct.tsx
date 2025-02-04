@@ -1,16 +1,25 @@
 import React from "react";
 import ProductCard from "../Product/ProductCard";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const HomeProduct: React.FC = () => {
   return (
     <div className="max-w-screen-xl pt-20 mx-auto px-6 py-12">
-      <h2 className="text-3xl font-semibold text-gray-800 text-left border-b-2  pb-2  border-[#F06392] mb-8 w-64 ">
+      <h2 className="text-3xl font-semibold text-gray-800 text-left border-b-2  pb-2  border-[#F06392]  w-64 ">
         Latest Products
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 mt-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {products.slice(0, 8).map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
+      </div>
+      <div className="flex justify-center">
+        <Link to="/product">
+          <Button className="  text-xl bg-[#F06392] text-white px-8 py-6  lg:mt-10 rounded-lg hover:bg-[#d44b7d] transition">
+            View More Products
+          </Button>
+        </Link>
       </div>
     </div>
   );
