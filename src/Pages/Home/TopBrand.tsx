@@ -1,5 +1,3 @@
-import React from "react";
-
 const brands = [
   {
     id: 1,

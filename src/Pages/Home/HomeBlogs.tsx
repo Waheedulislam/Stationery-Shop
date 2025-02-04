@@ -1,5 +1,3 @@
-import React from "react";
-
 const HomeBlogs: React.FC = () => {
   return (
     <div className="max-w-screen-xl mx-auto px-6 py-12">
