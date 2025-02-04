@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../lib/variants";
 
 interface ProductProps {
   product: {
@@ -12,7 +14,15 @@ interface ProductProps {
 
 const ProductCard: React.FC<ProductProps> = ({ product }) => {
   return (
-    <div className="bg-white shadow-lg rounded-xl overflow-hidden transition-transform transform hover:scale-105 duration-300">
+    <motion.div
+      variants={fadeIn("up", 0.2)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.4 }}
+      whileHover={{ scale: 1.05 }} // Framer Motion handles scaling on hover
+      transition={{ type: "spring", stiffness: 300 }}
+      className="bg-white mb-20 shadow-lg rounded-xl overflow-hidden"
+    >
       <img
         src={product.image}
         alt={product.name}
@@ -30,7 +40,7 @@ const ProductCard: React.FC<ProductProps> = ({ product }) => {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
