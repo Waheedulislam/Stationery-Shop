@@ -18,8 +18,8 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-[#F06392] shadow-md py-4 px-6 fixed w-full z-10">
-      <div className="flex justify-between items-center max-w-screen-xl mx-auto">
+    <nav className="bg-[#F06392] shadow-md py-4 px-6 fixed w-full z-10 mt-0">
+      <div className="flex justify-between items-center max-w-screen-xl mx-auto px-2">
         {/* Logo & Branding */}
         <Link
           to="/"
